@@ -7,18 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C0AE4CC29834EA900E2B334 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AE4CB29834EA900E2B334 /* ContentViewModel.swift */; };
+		5C0AE4CE2983558000E2B334 /* CatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AE4CD2983558000E2B334 /* CatView.swift */; };
 		5C8AB771297EA6F600BCE5A4 /* PickerWithCoreDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8AB770297EA6F600BCE5A4 /* PickerWithCoreDataApp.swift */; };
 		5C8AB773297EA6F600BCE5A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8AB772297EA6F600BCE5A4 /* ContentView.swift */; };
 		5C8AB775297EA6F700BCE5A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C8AB774297EA6F700BCE5A4 /* Assets.xcassets */; };
 		5C8AB778297EA6F700BCE5A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C8AB777297EA6F700BCE5A4 /* Preview Assets.xcassets */; };
+		5C8AB780297EA74000BCE5A4 /* Stash.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C8AB77E297EA74000BCE5A4 /* Stash.xcdatamodeld */; };
+		5C8AB783297EAADB00BCE5A4 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8AB782297EAADB00BCE5A4 /* DataController.swift */; };
+		5C8AB787297EAD3B00BCE5A4 /* NewCatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8AB786297EAD3B00BCE5A4 /* NewCatView.swift */; };
+		5C8AB789297EAD4A00BCE5A4 /* NewCatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8AB788297EAD4A00BCE5A4 /* NewCatViewModel.swift */; };
+		5C8AB78C297F778E00BCE5A4 /* UnsplashAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8AB78B297F778E00BCE5A4 /* UnsplashAPIManager.swift */; };
+		5C8AB78E297F78C200BCE5A4 /* UnsplashPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8AB78D297F78C200BCE5A4 /* UnsplashPhoto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C0AE4CB29834EA900E2B334 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		5C0AE4CD2983558000E2B334 /* CatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatView.swift; sourceTree = "<group>"; };
 		5C8AB76D297EA6F600BCE5A4 /* PickerWithCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickerWithCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8AB770297EA6F600BCE5A4 /* PickerWithCoreDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerWithCoreDataApp.swift; sourceTree = "<group>"; };
 		5C8AB772297EA6F600BCE5A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5C8AB774297EA6F700BCE5A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C8AB777297EA6F700BCE5A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5C8AB77F297EA74000BCE5A4 /* Stash.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Stash.xcdatamodel; sourceTree = "<group>"; };
+		5C8AB782297EAADB00BCE5A4 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		5C8AB786297EAD3B00BCE5A4 /* NewCatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCatView.swift; sourceTree = "<group>"; };
+		5C8AB788297EAD4A00BCE5A4 /* NewCatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCatViewModel.swift; sourceTree = "<group>"; };
+		5C8AB78B297F778E00BCE5A4 /* UnsplashAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPIManager.swift; sourceTree = "<group>"; };
+		5C8AB78D297F78C200BCE5A4 /* UnsplashPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhoto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +68,12 @@
 			isa = PBXGroup;
 			children = (
 				5C8AB770297EA6F600BCE5A4 /* PickerWithCoreDataApp.swift */,
-				5C8AB772297EA6F600BCE5A4 /* ContentView.swift */,
-				5C8AB774297EA6F700BCE5A4 /* Assets.xcassets */,
+				5C8AB78A297F775500BCE5A4 /* UpsplashAPI */,
+				5C8AB785297EAD1500BCE5A4 /* View Models */,
+				5C8AB784297EAD0E00BCE5A4 /* Views */,
+				5C8AB781297EA75100BCE5A4 /* Data */,
 				5C8AB776297EA6F700BCE5A4 /* Preview Content */,
+				5C8AB774297EA6F700BCE5A4 /* Assets.xcassets */,
 			);
 			path = PickerWithCoreData;
 			sourceTree = "<group>";
@@ -65,6 +84,43 @@
 				5C8AB777297EA6F700BCE5A4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5C8AB781297EA75100BCE5A4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5C8AB77E297EA74000BCE5A4 /* Stash.xcdatamodeld */,
+				5C8AB782297EAADB00BCE5A4 /* DataController.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5C8AB784297EAD0E00BCE5A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5C0AE4CD2983558000E2B334 /* CatView.swift */,
+				5C8AB772297EA6F600BCE5A4 /* ContentView.swift */,
+				5C8AB786297EAD3B00BCE5A4 /* NewCatView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5C8AB785297EAD1500BCE5A4 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C8AB788297EAD4A00BCE5A4 /* NewCatViewModel.swift */,
+				5C0AE4CB29834EA900E2B334 /* ContentViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		5C8AB78A297F775500BCE5A4 /* UpsplashAPI */ = {
+			isa = PBXGroup;
+			children = (
+				5C8AB78B297F778E00BCE5A4 /* UnsplashAPIManager.swift */,
+				5C8AB78D297F78C200BCE5A4 /* UnsplashPhoto.swift */,
+			);
+			path = UpsplashAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +193,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C8AB787297EAD3B00BCE5A4 /* NewCatView.swift in Sources */,
+				5C8AB780297EA74000BCE5A4 /* Stash.xcdatamodeld in Sources */,
+				5C8AB789297EAD4A00BCE5A4 /* NewCatViewModel.swift in Sources */,
+				5C8AB783297EAADB00BCE5A4 /* DataController.swift in Sources */,
 				5C8AB773297EA6F600BCE5A4 /* ContentView.swift in Sources */,
+				5C0AE4CC29834EA900E2B334 /* ContentViewModel.swift in Sources */,
+				5C8AB78C297F778E00BCE5A4 /* UnsplashAPIManager.swift in Sources */,
 				5C8AB771297EA6F600BCE5A4 /* PickerWithCoreDataApp.swift in Sources */,
+				5C8AB78E297F78C200BCE5A4 /* UnsplashPhoto.swift in Sources */,
+				5C0AE4CE2983558000E2B334 /* CatView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +403,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5C8AB77E297EA74000BCE5A4 /* Stash.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5C8AB77F297EA74000BCE5A4 /* Stash.xcdatamodel */,
+			);
+			currentVersion = 5C8AB77F297EA74000BCE5A4 /* Stash.xcdatamodel */;
+			path = Stash.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5C8AB765297EA6F600BCE5A4 /* Project object */;
 }

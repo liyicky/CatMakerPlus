@@ -37,6 +37,7 @@ struct DataController {
     }
     
     func fetchCats() -> [CatEntity] {
+        print("Fetched Cats")
         let fetchRequest = NSFetchRequest<CatEntity>(entityName: "CatEntity")
         var entities: [CatEntity] = []
         do {

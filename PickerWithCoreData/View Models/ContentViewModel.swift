@@ -6,12 +6,14 @@
 //
 
 import Foundation
+import Combine
 
 final class ContentViewModel: ObservableObject {
-    @Published var addCatIsPresented = false
-    @Published var cats = [CatEntity]()
     
-    init() {
-        self.cats = DataController.instance.fetchCats()
+    @Published var addCatIsPresented = false
+    @Published var cats: [CatEntity] = []
+        
+    func loadCats() {
+        cats = DataController.instance.fetchCats()
     }
 }

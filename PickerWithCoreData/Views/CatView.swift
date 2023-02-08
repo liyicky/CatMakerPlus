@@ -10,12 +10,22 @@ import SwiftUI
 struct CatView: View {
     
     let cat: CatEntity
-    let preloadedCatPicture: UIImage
+    @State var preloadedCatPicture: UIImage
     @State var cellHeight: CGFloat = 200
+    @State var name: String
+    @State var favFood: String
+    @State var age: String
     
     init(cat: CatEntity) {
         self.cat = cat
+        self.name = cat.name ?? "Nameless"
+        self.favFood = cat.favoriteFood ?? "Nothing"
+        self.age = String(cat.age)
         self.preloadedCatPicture = UIImage(data: cat.picture!)!
+    }
+    
+    var extended: Bool {
+        cellHeight == 400
     }
     
     var body: some View {
@@ -30,6 +40,15 @@ struct CatView: View {
         .clipShape(RoundedRectangle(cornerRadius: 7))
         .shadow(color: .primary.opacity(0.4), radius: 5, x: 0, y: 5)
         .padding(5)
+        .onAppear {
+            reload()
+        }
+    }
+    
+    func reload() {
+        self.name = cat.name ?? "Nameless"
+        self.favFood = cat.favoriteFood ?? "Nothing"
+        self.age = String(cat.age)
     }
 }
 
@@ -61,6 +80,7 @@ struct CatView_Previews: PreviewProvider {
 }
 
 extension CatView {
+    @ViewBuilder
     func catPhoto(_ geometry: GeometryProxy) -> some View {
         Image(uiImage: preloadedCatPicture)
             .resizable()
@@ -77,38 +97,72 @@ extension CatView {
                 catDeets
             }
             Spacer()
+            HStack {
+                Spacer()
+                if extended {
+                    catEditButton
+                        .opacity(extended ? 1 : 0)
+                }
+            }
         }
         .frame(height: cellHeight)
         .contentShape(Rectangle())
         .onTapGesture {
             withAnimation {
-                cellHeight = cellHeight == 200 ? 400 : 200
+                cellHeight = extended ? 200 : 400
             }
             print("\(cat.name!): \(cat.id!) - Expanded? \(cellHeight == 200 ? "No" : "Yes")")
         }
     }
     
     private var catName: some View {
-        Text(cat.name ?? "Nameless")
+        Text(name)
             .font(.title)
             .padding(5)
             .background(.ultraThinMaterial)
+            .clipShape(RoundedCorner(radius: 5, corners: [.bottomRight]))
             .shadow(color: .primary.opacity(0.3), radius: 5)
     }
     
     private var catDeets: some View {
         VStack {
-            Text("Age: \(String(cat.age))")
+            Text("Age: \(age)")
                 .font(.footnote)
                 .fontWeight(.light)
             Divider()
-            Text("Fav Food: \(cat.favoriteFood ?? "None")")
+            Text("Fav Food: \(favFood)")
                 .font(.footnote)
                 .fontWeight(.light)
         }
         .padding(2)
         .background(.ultraThinMaterial)
         .frame(width: 100)
+        .clipShape(RoundedCorner(radius: 5, corners: [.bottomLeft]))
         .shadow(color: .primary.opacity(0.3), radius: 5)
+    }
+    
+    private var catEditButton: some View {
+        NavigationLink {
+            CatDetailsView(cat: cat)
+        } label: {
+            
+            Image(systemName: "gearshape.fill")
+                .foregroundStyle(
+                    .white.opacity(0.5).gradient.shadow(
+                        .inner(color: .black, radius: 2, x: 2, y: 1)
+                    )
+                )
+                .font(.system(size: 35))
+                .background(
+                    RoundedCorner(radius: 5, corners: [.topLeft])
+                        .frame(width: 50, height: 50)
+                        .foregroundStyle(
+                            .white.opacity(0.3).gradient.shadow(
+                                .inner(color: .black, radius: 2, x: 2, y: 2)
+                            )
+                        )
+                )
+        }
+
     }
 }

@@ -10,6 +10,7 @@
 		5C0AE4CC29834EA900E2B334 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AE4CB29834EA900E2B334 /* ContentViewModel.swift */; };
 		5C0AE4CE2983558000E2B334 /* CatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AE4CD2983558000E2B334 /* CatView.swift */; };
 		5C0AE4EB2988962500E2B334 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AE4EA2988962500E2B334 /* Helpers.swift */; };
+		5C10B886298A4C910013C861 /* RoundedCornersExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10B885298A4C910013C861 /* RoundedCornersExtention.swift */; };
 		5C8AB771297EA6F600BCE5A4 /* PickerWithCoreDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8AB770297EA6F600BCE5A4 /* PickerWithCoreDataApp.swift */; };
 		5C8AB773297EA6F600BCE5A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8AB772297EA6F600BCE5A4 /* ContentView.swift */; };
 		5C8AB775297EA6F700BCE5A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C8AB774297EA6F700BCE5A4 /* Assets.xcassets */; };
@@ -20,12 +21,17 @@
 		5C8AB789297EAD4A00BCE5A4 /* NewCatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8AB788297EAD4A00BCE5A4 /* NewCatViewModel.swift */; };
 		5C8AB78C297F778E00BCE5A4 /* UnsplashAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8AB78B297F778E00BCE5A4 /* UnsplashAPIManager.swift */; };
 		5C8AB78E297F78C200BCE5A4 /* UnsplashPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8AB78D297F78C200BCE5A4 /* UnsplashPhoto.swift */; };
+		5CE78559298B4CE700CE1012 /* CatDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE78558298B4CE700CE1012 /* CatDetailsView.swift */; };
+		5CE7855B298B64EF00CE1012 /* CatEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7855A298B64EF00CE1012 /* CatEditView.swift */; };
+		5CE7855D298B656900CE1012 /* CatEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7855C298B656900CE1012 /* CatEditViewModel.swift */; };
+		5CE7855F298E1C8E00CE1012 /* CatStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7855E298E1C8E00CE1012 /* CatStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5C0AE4CB29834EA900E2B334 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		5C0AE4CD2983558000E2B334 /* CatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatView.swift; sourceTree = "<group>"; };
 		5C0AE4EA2988962500E2B334 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		5C10B885298A4C910013C861 /* RoundedCornersExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersExtention.swift; sourceTree = "<group>"; };
 		5C8AB76D297EA6F600BCE5A4 /* PickerWithCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickerWithCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8AB770297EA6F600BCE5A4 /* PickerWithCoreDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerWithCoreDataApp.swift; sourceTree = "<group>"; };
 		5C8AB772297EA6F600BCE5A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,6 +43,10 @@
 		5C8AB788297EAD4A00BCE5A4 /* NewCatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCatViewModel.swift; sourceTree = "<group>"; };
 		5C8AB78B297F778E00BCE5A4 /* UnsplashAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPIManager.swift; sourceTree = "<group>"; };
 		5C8AB78D297F78C200BCE5A4 /* UnsplashPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhoto.swift; sourceTree = "<group>"; };
+		5CE78558298B4CE700CE1012 /* CatDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailsView.swift; sourceTree = "<group>"; };
+		5CE7855A298B64EF00CE1012 /* CatEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatEditView.swift; sourceTree = "<group>"; };
+		5CE7855C298B656900CE1012 /* CatEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatEditViewModel.swift; sourceTree = "<group>"; };
+		5CE7855E298E1C8E00CE1012 /* CatStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		5C10B884298A4C7F0013C861 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5C10B885298A4C910013C861 /* RoundedCornersExtention.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5C8AB764297EA6F600BCE5A4 = {
 			isa = PBXGroup;
 			children = (
@@ -77,8 +95,9 @@
 		5C8AB76F297EA6F600BCE5A4 /* PickerWithCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				5C0AE4E92988961100E2B334 /* Helpers */,
 				5C8AB770297EA6F600BCE5A4 /* PickerWithCoreDataApp.swift */,
+				5C10B884298A4C7F0013C861 /* Extensions */,
+				5C0AE4E92988961100E2B334 /* Helpers */,
 				5C8AB78A297F775500BCE5A4 /* UpsplashAPI */,
 				5C8AB785297EAD1500BCE5A4 /* View Models */,
 				5C8AB784297EAD0E00BCE5A4 /* Views */,
@@ -102,6 +121,7 @@
 			children = (
 				5C8AB77E297EA74000BCE5A4 /* Stash.xcdatamodeld */,
 				5C8AB782297EAADB00BCE5A4 /* DataController.swift */,
+				5CE7855E298E1C8E00CE1012 /* CatStorage.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -112,6 +132,8 @@
 				5C0AE4CD2983558000E2B334 /* CatView.swift */,
 				5C8AB772297EA6F600BCE5A4 /* ContentView.swift */,
 				5C8AB786297EAD3B00BCE5A4 /* NewCatView.swift */,
+				5CE78558298B4CE700CE1012 /* CatDetailsView.swift */,
+				5CE7855A298B64EF00CE1012 /* CatEditView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -121,6 +143,7 @@
 			children = (
 				5C8AB788297EAD4A00BCE5A4 /* NewCatViewModel.swift */,
 				5C0AE4CB29834EA900E2B334 /* ContentViewModel.swift */,
+				5CE7855C298B656900CE1012 /* CatEditViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -204,17 +227,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CE78559298B4CE700CE1012 /* CatDetailsView.swift in Sources */,
 				5C8AB787297EAD3B00BCE5A4 /* NewCatView.swift in Sources */,
 				5C8AB780297EA74000BCE5A4 /* Stash.xcdatamodeld in Sources */,
 				5C8AB789297EAD4A00BCE5A4 /* NewCatViewModel.swift in Sources */,
 				5C8AB783297EAADB00BCE5A4 /* DataController.swift in Sources */,
 				5C0AE4EB2988962500E2B334 /* Helpers.swift in Sources */,
 				5C8AB773297EA6F600BCE5A4 /* ContentView.swift in Sources */,
+				5CE7855B298B64EF00CE1012 /* CatEditView.swift in Sources */,
+				5CE7855F298E1C8E00CE1012 /* CatStorage.swift in Sources */,
 				5C0AE4CC29834EA900E2B334 /* ContentViewModel.swift in Sources */,
 				5C8AB78C297F778E00BCE5A4 /* UnsplashAPIManager.swift in Sources */,
 				5C8AB771297EA6F600BCE5A4 /* PickerWithCoreDataApp.swift in Sources */,
 				5C8AB78E297F78C200BCE5A4 /* UnsplashPhoto.swift in Sources */,
 				5C0AE4CE2983558000E2B334 /* CatView.swift in Sources */,
+				5C10B886298A4C910013C861 /* RoundedCornersExtention.swift in Sources */,
+				5CE7855D298B656900CE1012 /* CatEditViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

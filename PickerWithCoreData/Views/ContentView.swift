@@ -12,25 +12,24 @@ struct ContentView: View {
     @StateObject var vm = ContentViewModel()
     
     var body: some View {
-        ZStack(alignment: .bottom) {
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack {
-                    ForEach(vm.cats, id: \.self) { cat in
-                        CatView(cat: cat)
-                    }
+        NavigationStack {
+            cards
+            .padding(.horizontal, 10)
+            .sheet(isPresented: $vm.addCatIsPresented) {
+                NewCatView()
+            }
+            .navigationTitle("Cat App")
+            .toolbar {
+                ToolbarItemGroup(placement: .navigationBarLeading) {
+                    settingsBtn
+                }
+                ToolbarItemGroup(placement: .primaryAction) {
+                    addCatBtn
                 }
             }
-            Button {
-                vm.addCatIsPresented.toggle()
-            } label: {
-                Text("Add a cat 🐱")
-                    .padding()
-                    .background(.regularMaterial)
+            .onAppear {
+                vm.loadCats()
             }
-        }
-        .padding()
-        .sheet(isPresented: $vm.addCatIsPresented) {
-            NewCatView()
         }
     }
 }
@@ -38,5 +37,33 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+extension ContentView {
+    private var cards: some View {
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack {
+                ForEach(vm.cats) { cat in
+                    CatView(cat: cat)
+                }
+            }
+        }
+    }
+    
+    private var addCatBtn: some View {
+        Button {
+            vm.addCatIsPresented.toggle()
+        } label: {
+            Image(systemName: "plus.circle.fill")
+        }
+    }
+    
+    private var settingsBtn: some View {
+        Button {
+            // open the settings
+        } label: {
+            Image(systemName: "gearshape")
+        }
     }
 }
